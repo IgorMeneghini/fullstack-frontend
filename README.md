@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Gerenciador de Leads Full Stack - ReactJS & Spring Boot
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto implementa um sistema de gerenciamento de leads para uma empresa, desenvolvido como um desafio técnico Full Stack. A aplicação permite visualizar, aceitar e recusar leads, além de aplicar descontos automaticamente em situações específicas.
 
-## Available Scripts
+## Funcionalidades Principais
 
-In the project directory, you can run:
+- **Gestão de Leads**: Visualização de leads em duas categorias: "Invited" e "Accepted".
+- **Detalhes do lead**: Nome do contato, data de criação, bairro, categoria, ID, descrição e preço.
+- **Ações**: Aceitar ou Recusar leads.
+- **Lógica de Negócios**: 
+  - **Aceitação de leads**: Atualização do status do lead para "Aceito". Aplicação automática de 10% de desconto para leads com valor superior a US$ 500.
+  - **Recusa de leads**: Atualização do status do lead para "Recusado".
+  - **Envio de notificação por e-mail** para o time de vendas (a ser implementado).
 
-### `npm start`
+## Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Front-End**: 
+  - **ReactJS** - Escolhido por sua popularidade, grande comunidade e sinergia com as tecnologias back-end selecionadas.
+- **Back-End**: 
+  - **Java** - Por sua robustez e experiência prévia do desenvolvedor.
+  - **Spring Boot** - Facilita a configuração, integração com o ReactJS via Axios e conexão com o banco de dados.
+  - **Maven** - Gerenciamento de dependências eficiente e familiaridade do desenvolvedor.
+- **Banco de Dados**: 
+  - **MySQL** - Selecionado pela experiência prévia do desenvolvedor.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Arquitetura e Design
 
-### `npm test`
+O projeto utiliza uma arquitetura cliente-servidor, com o ReactJS consumindo uma API RESTful desenvolvida com Spring Boot. A comunicação entre o front-end e o back-end é realizada através de requisições HTTP.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Pré-requisitos:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Java 23
+- MySQL 8.0
+- Maven 3.9.9
+- Spring Boot 3.3.4
+- Node.js e npm (para o ReactJS) - versão LTS recomendada
